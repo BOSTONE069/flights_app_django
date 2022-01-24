@@ -19,4 +19,6 @@ from django.urls import include, path
 urlpatterns = [
     path('admin/', admin.site.urls),
     path("flights/", include("flights.urls")) #this is to include the app component in the project
+    path("users/", include("users.urls"))
 ]
+

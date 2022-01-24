@@ -3,8 +3,12 @@
  {% block body %}
     <h1>Flights</h1>
     <ul>
-        {% for flights in flights %}
-         <li>Flight {{ flight.id }}: {{flight.origin}} to {{flight.destination}} </li>
+        {% for flight in flights %}
+         <li>
+             <a href="{% url 'flight' flight.id %}"><!--This if for linking the flights with passengers-->
+                Flight {{ flight.id }}: {{flight.origin}} to {{flight.destination}} 
+             </a>
+             </li>
         {% endfor %}
     </ul>
     
